@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <Style>
+        .container {
+
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+
+        }
+
+        .container2 {
+
+            text-align: center;
+            display: none;
+        }
+
+        .text {
+
+            padding: 20px;
+            text-align: center
+        }
+    </Style>
+</head>
+
+<body>
+
+
+    <h1 class="text">Employee Record</h1>
+
+
+    <div class="container">
+        <table border="2" cellspacing="6px" id="tb">
+            <tr>
+
+                <th>Name</th>
+                <th>ID</th>
+                <th>Designation</th>
+                <th>Experience</th>
+                <th>Button</th>
+            </tr>
+
+            <tr>
+
+                <td class="1"></td>
+                <td class="1"></td>
+                <td class="1"></td>
+                <td class="1"></td>
+                <td rowspan=100%>
+                    <button id="b1" type="button" class="btn btn-success btn-sm" onclick="add()">Add</button>
+                    <br>
+                    <br>
+                    <button id="b2" class="btn btn-warning btn-xs" type="button" onclick="remove()">Remove</button>
+                    <br>
+                    <br>
+                    <button id="b3" type="button" class="btn btn-danger btn-sm" onclick="edit()">Edit</button>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="2"></td>
+                <td class="2"></td>
+                <td class="2"></td>
+                <td class="2"></td>
+
+
+            </tr>
+
+
+            <tr>
+                <td class="3"></td>
+                <td class="3"></td>
+                <td class="3"></td>
+                <td class="3"></td>
+
+
+            </tr>
+
+            <tr>
+                <td class="4"></td>
+                <td class="4"></td>
+                <td class="4"></td>
+                <td class="4"></td>
+
+
+            </tr>
+
+            <tr>
+                <td class="5"></td>
+                <td class="5"></td>
+                <td class="5"></td>
+                <td class="5"></td>
+
+            </tr>
+
+            <tr>
+                <td class="6"></td>
+                <td class="6"></td>
+                <td class="6"></td>
+                <td class="6"></td>
+
+            </tr>
+        </table>
+    </div>
+
+    <!-- Add Form -->
+    <br>
+    <br>
+    <div class="container2" id="addform">
+        <h1 id="h1">Input New Records</h1>
+        <br>
+        <br>
+        <label id="l1">Employee Name</label>
+        <br>
+        <br>
+        <input type="text" id="ip1" placeholder="Employee Name" />
+        <br>
+        <br>
+        <label id="l2">Employee ID</label>
+        <br>
+        <br>
+        <input type="text" id="ip2" placeholder="Employee ID" />
+        <br>
+        <br>
+        <label id="l3">Designation</label>
+        <br>
+        <br>
+        <input type="text" id="ip3" placeholder="Designation" />
+        <br>
+        <br>
+        <label id="l4">Experience</label>
+        <br>
+        <br>
+        <input type="text" id="ip4" placeholder="Experience" />
+        <br>
+        <br>
+        <button type="button" id="b5" onclick="final()">Final</button>
+    </div>
+
+
+    <!-- Edit Form -->
+    <div class="container2" id="editform">
+        <h1 id="a">Input New Records</h1>
+        <br>
+        <br>
+        <label id="b">Employee Name</label>
+        <br>
+        <br>
+        <input type="text" id="g1" placeholder="Employee Name" />
+        <br>
+        <br>
+        <label id="c">Employee ID</label>
+        <br>
+        <br>
+        <input type="text" id="c1" placeholder="Employee ID" />
+        <br>
+        <br>
+        <label id="d">Designation</label>
+        <br>
+        <br>
+        <input type="text" id="d1" placeholder="Designation" />
+        <br>
+        <br>
+        <label id="e">Experience</label>
+        <br>
+        <br>
+        <input type="text" id="e1" placeholder="Experience" />
+        <br>
+        <br>
+        <button type="button" id="f1" onclick="finall()">Final</button>
+    </div>
+
+    <script src="1.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
