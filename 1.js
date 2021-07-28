@@ -85,7 +85,7 @@ function rec() {
 
 }
 
-var i1, i2, i3, i4, bn, i5, i6, i7, i8, i9, cell1, cell2, cell3, cell4;
+var i1, i2, i3, i4, bn, i5, i6, i7, i8, i9, cell1, cell2, cell3, cell4, cell5, cell6;
 
 function add() {
 
@@ -112,6 +112,18 @@ function add() {
     cell2 = row.insertCell(1);
     cell3 = row.insertCell(2);
     cell4 = row.insertCell(3);
+    cell5 = row.insertCell(4);
+
+
+    cell5.innerHTML = ` <button id="b1" type="button" class="btn btn-success btn-sm" onclick="add()">Add</button>
+                        <button id="b2" class="btn btn-warning btn-xs" type="button" onclick="remove(${row.rowIndex})">Remove</button> 
+                        <button id="b3" type="button" class="btn btn-danger btn-sm" onclick="edit(${this})">Edit</button>`;
+    cell5.style.display = "none";
+
+    i1.value = "";
+    i2.value = "";
+    i3.value = "";
+    i4.value = "";
 }
 
 function final() {
@@ -119,6 +131,7 @@ function final() {
     cell2.innerHTML = i2.value;
     cell3.innerHTML = i3.value;
     cell4.innerHTML = i4.value;
+    cell5.style.display = "block";
 
     let z = document.getElementById("addform");
 
@@ -128,17 +141,15 @@ function final() {
 }
 
 
-function remove() {
+function remove(x) {
 
+    console.log(x);
 
     if (confirm("Are you sure,you want to delete the Record")) {
 
-        var gg = prompt("Enter the row number you want to remove");
-
-        let table = document.getElementById("tb");
-
-        let row = table.rows;
-        row[gg].remove();
+        var table = document.getElementById("tb");
+        var row = table.rows;
+        row[x].remove();
 
         let z = document.getElementById("addform");
 
@@ -156,7 +167,7 @@ function remove() {
 
 var y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, input;
 
-function edit() {
+function edit(x) {
 
     let z = document.getElementById("editform");
 
@@ -173,8 +184,8 @@ function edit() {
     y9 = document.getElementById("e1");
     y10 = document.getElementById("f1");
 
-    input = prompt("Which row you want to edit");
-
+    
+    input = x;
     var tdb = document.getElementsByClassName(input);
 
 

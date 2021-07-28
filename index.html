@@ -6,41 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <Style>
-        .container {
 
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 100px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-
-        }
-
-        .container2 {
+         .showsdata {
 
             text-align: center;
             display: none;
-        }
-
-        .text {
-
-            padding: 20px;
-            text-align: center
-        }
+        } 
     </Style>
 </head>
 
 <body>
 
 
-    <h1 class="text">Employee Record</h1>
+    <h1 class="text-center page-header">Employee Record</h1>
 
 
     <div class="container">
-        <table border="2" cellspacing="6px" id="tb">
+        <table class="table table-bordered" id="tb">
             <tr>
 
                 <th>Name</th>
@@ -50,65 +34,86 @@
                 <th>Button</th>
             </tr>
 
-            <tr>
+            <tr id="1">
 
                 <td class="1"></td>
                 <td class="1"></td>
                 <td class="1"></td>
                 <td class="1"></td>
-                <td rowspan=100%>
+                <td>
                     <button id="b1" type="button" class="btn btn-success btn-sm" onclick="add()">Add</button>
-                    <br>
-                    <br>
-                    <button id="b2" class="btn btn-warning btn-xs" type="button" onclick="remove()">Remove</button>
-                    <br>
-                    <br>
-                    <button id="b3" type="button" class="btn btn-danger btn-sm" onclick="edit()">Edit</button>
+                    <button id="b2" class="btn btn-warning btn-xs" type="button" onclick="remove(1)">Remove</button>
+                    <button id="b3" type="button" class="btn btn-danger btn-sm" onclick="edit(1)">Edit</button>
+                </td>
+
+            </tr>
+
+            <tr id="2">
+                <td class="2"></td>
+                <td class="2"></td>
+                <td class="2"></td>
+                <td class="2"></td>
+                <td>
+                    <button id="b1" type="button" class="btn btn-success btn-sm" onclick="add()">Add</button>
+                    <button id="b2" class="btn btn-warning btn-xs" type="button" onclick="remove(2)">Remove</button>
+                    <button id="b3" type="button" class="btn btn-danger btn-sm" onclick="edit(2)">Edit</button>
+                </td>
+
+
+            </tr>
+
+
+            <tr id="3">
+                <td class="3"></td>
+                <td class="3"></td>
+                <td class="3"></td>
+                <td class="3"></td>
+                <td>
+                    <button id="b1" type="button" class="btn btn-success btn-sm" onclick="add()">Add</button>
+                    <button id="b2" class="btn btn-warning btn-xs" type="button" onclick="remove(3)">Remove</button>
+                    <button id="b3" type="button" class="btn btn-danger btn-sm" onclick="edit(3)">Edit</button>
+                </td>
+
+
+            </tr>
+
+            <tr id="4">
+                <td class="4"></td>
+                <td class="4"></td>
+                <td class="4"></td>
+                <td class="4"></td>
+                <td>
+                    <button id="b1" type="button" class="btn btn-success btn-sm" onclick="add()">Add</button>
+                    <button id="b2" class="btn btn-warning btn-xs" type="button" onclick="remove(4)">Remove</button>
+                    <button id="b3" type="button" class="btn btn-danger btn-sm" onclick="edit(4)">Edit</button>
+                </td>
+
+
+            </tr>
+
+            <tr id="5">
+                <td class="5"></td>
+                <td class="5"></td>
+                <td class="5"></td>
+                <td class="5"></td>
+                <td>
+                    <button id="b1" type="button" class="btn btn-success btn-sm" onclick="add()">Add</button>
+                    <button id="b2" class="btn btn-warning btn-xs" type="button" onclick="remove(5)">Remove</button>
+                    <button id="b3" type="button" class="btn btn-danger btn-sm" onclick="edit(5)">Edit</button>
                 </td>
 
             </tr>
 
             <tr>
-                <td class="2"></td>
-                <td class="2"></td>
-                <td class="2"></td>
-                <td class="2"></td>
-
-
-            </tr>
-
-
-            <tr>
-                <td class="3"></td>
-                <td class="3"></td>
-                <td class="3"></td>
-                <td class="3"></td>
-
-
-            </tr>
-
-            <tr>
-                <td class="4"></td>
-                <td class="4"></td>
-                <td class="4"></td>
-                <td class="4"></td>
-
-
-            </tr>
-
-            <tr>
-                <td class="5"></td>
-                <td class="5"></td>
-                <td class="5"></td>
-                <td class="5"></td>
-
-            </tr>
-
-            <tr>
                 <td class="6"></td>
                 <td class="6"></td>
                 <td class="6"></td>
                 <td class="6"></td>
+                <td>
+                    <button id="b1" type="button" class="btn btn-success btn-sm" onclick="add()">Add</button>
+                    <button id="b2" class="btn btn-warning btn-xs" type="button" onclick="remove(6)">Remove</button>
+                    <button id="b3" type="button" class="btn btn-danger btn-sm" onclick="edit(6)">Edit</button>
+                </td>
 
             </tr>
         </table>
@@ -117,7 +122,7 @@
     <!-- Add Form -->
     <br>
     <br>
-    <div class="container2" id="addform">
+    <div class="container text-center showsdata" id="addform">
         <h1 id="h1">Input New Records</h1>
         <br>
         <br>
@@ -150,7 +155,7 @@
 
 
     <!-- Edit Form -->
-    <div class="container2" id="editform">
+    <div class="container text-center showsdata" id="editform">
         <h1 id="a">Input New Records</h1>
         <br>
         <br>
@@ -182,6 +187,7 @@
     </div>
 
     <script src="1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
