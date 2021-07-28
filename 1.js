@@ -114,10 +114,15 @@ function add() {
     cell4 = row.insertCell(3);
     cell5 = row.insertCell(4);
 
+    cell1.setAttribute('class',`${row.rowIndex}`);
+    cell2.setAttribute('class',`${row.rowIndex}`);
+    cell3.setAttribute('class',`${row.rowIndex}`);
+    cell4.setAttribute('class',`${row.rowIndex}`);
+
 
     cell5.innerHTML = ` <button id="b1" type="button" class="btn btn-success btn-sm" onclick="add()">Add</button>
                         <button id="b2" class="btn btn-warning btn-xs" type="button" onclick="remove(${row.rowIndex})">Remove</button> 
-                        <button id="b3" type="button" class="btn btn-danger btn-sm" onclick="edit(${this})">Edit</button>`;
+                        <button id="b3" type="button" class="btn btn-danger btn-sm" onclick="edit(${row.rowIndex})">Edit</button>`;
     cell5.style.display = "none";
 
     i1.value = "";
@@ -165,7 +170,7 @@ function remove(x) {
 
 }
 
-var y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, input;
+var y3, y5, y7, y9, input;
 
 function edit(x) {
 
@@ -173,16 +178,11 @@ function edit(x) {
 
     z.style.display = "block";
 
-    y1 = document.getElementById("a");
-    y2 = document.getElementById("b");
+  
     y3 = document.getElementById("g1");
-    y4 = document.getElementById("c");
     y5 = document.getElementById("c1");
-    y6 = document.getElementById("d");
     y7 = document.getElementById("d1");
-    y8 = document.getElementById("e");
     y9 = document.getElementById("e1");
-    y10 = document.getElementById("f1");
 
     
     input = x;
